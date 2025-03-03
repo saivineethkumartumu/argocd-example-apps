@@ -17,9 +17,10 @@ service:
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations: |
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: "#new-channel"
+    notifications.argoproj.io/subscribe.on-sync-failed.slack: "#new-channel"
+    notifications.argoproj.io/subscribe.on-health-degraded.slack: "#new-channel"
   path: /
   hosts:
     - chart-example.local
