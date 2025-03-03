@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
-  annotations: |
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: "#new-channel"
-    notifications.argoproj.io/subscribe.on-sync-failed.slack: "#new-channel"
-    notifications.argoproj.io/subscribe.on-health-degraded.slack: "#new-channel"
+  #annotations: |
+  #  notifications.argoproj.io/subscribe.on-sync-succeeded.slack: "#new-channel"
+  #  notifications.argoproj.io/subscribe.on-sync-failed.slack: "#new-channel"
+  #  notifications.argoproj.io/subscribe.on-health-degraded.slack: "#new-channel"
 spec:
   replicas: 2
   revisionHistoryLimit: 3
